@@ -1,13 +1,11 @@
 package instatag.com.b3ds;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
-import com.google.android.gms.vision.text.Line;
 
 public class DoctorDashboardActivity extends AppCompatActivity {
     LinearLayout setupDoctorProfile,servicelayout,assistantLayout,createplanLayout,patientLayout,notesLayout;

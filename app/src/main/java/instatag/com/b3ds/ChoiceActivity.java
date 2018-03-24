@@ -5,8 +5,8 @@ package instatag.com.b3ds;
  */
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,9 +64,9 @@ public class ChoiceActivity extends AppCompatActivity  {
                 return true;
             }
         });*/
-        radioButtonDoctor = (RadioButton) popupView.findViewById(R.id.radioDoctor);
-        radioButtonPatient = (RadioButton) popupView.findViewById(R.id.radioPatient);
-        continueButton=(Button)popupView.findViewById(R.id.continueButton);
+        radioButtonDoctor = popupView.findViewById(R.id.radioDoctor);
+        radioButtonPatient =  popupView.findViewById(R.id.radioPatient);
+        continueButton=popupView.findViewById(R.id.continueButton);
         //Log.i("MainActivity", "onButtonShowPopupWindowClick: "+continueButton);
         continueButton.setOnClickListener(new View.OnClickListener(){
             @Override

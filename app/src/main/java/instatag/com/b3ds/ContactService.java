@@ -1,7 +1,9 @@
-package instatag.com.b3ds; ;
+package instatag.com.b3ds;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+
 
 public class ContactService {
 

@@ -6,7 +6,8 @@
 
    <ListView
        android:id="@+id/servicelist"
-       android:divider="@color/bluelight"
+       android:divider="#000"
+       android:padding="10dp"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content">
 

@@ -1,8 +1,6 @@
 package instatag.com.b3ds;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,10 +9,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -32,8 +26,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.google.android.gms.internal.zzagz.runOnUiThread;
 
 public class ServicesActivity extends AppCompatActivity {
 
@@ -74,16 +66,12 @@ public class ServicesActivity extends AppCompatActivity {
             int i;
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
 
             @Override
             public void onPageSelected(int position) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
                 i=viewpage.getCurrentItem();
+                Log.i("Services Activity", "onPageSelected: "+i);
                 if(i==1)
                 {
                     OkHttpClient client = new OkHttpClient();
@@ -101,13 +89,15 @@ public class ServicesActivity extends AppCompatActivity {
                         public void onResponse(final Response response) throws IOException {
                             listServiceResponse(response.body().string());
                             final boolean isSuccessful=serviceResponse.getStatus();
-                            final List l=serviceResponse.getData();
+                            final List<Datum2> l=serviceResponse.getData();
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     if (isSuccessful) {
 
-                                        Toast.makeText(getApplication(), "List of services ", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplication(), "List of services ", Toast.LENGTH_SHORT).show();
+                                        ServiceListViewAdapter adapter=new ServiceListViewAdapter(getApplicationContext(),l);
+                                        listServices.ls.setAdapter(adapter);
                                         //l.toArray();
                                         /*for (int i=0;i<l.size();i++){
                                             Datum2 d=(Datum2) l.get(i);
@@ -119,7 +109,7 @@ public class ServicesActivity extends AppCompatActivity {
                                         //intent.putExtra("userid",userid);
                                         //startActivity(intent);
                                     } else {
-                                        Toast.makeText(getApplication(), "Could not load the list!!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplication(), "Could not load the list!!", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
@@ -127,8 +117,10 @@ public class ServicesActivity extends AppCompatActivity {
                     });
 
                 }
-                //Log.i("ServicesActivity", "onPageScrollStateChanged: ");
-               // Log.i("ServicesActivity", "onPageScrolled: "+viewpage.getCurrentItem());
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
             }
         });
 

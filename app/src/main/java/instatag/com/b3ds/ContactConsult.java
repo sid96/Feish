@@ -1,16 +1,11 @@
 package instatag.com.b3ds;
 
-/**
- * Created by RahulReign on 21-03-2018.
- */
+
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-        import com.google.gson.annotations.Expose;
-        import com.google.gson.annotations.SerializedName;
-
-        import java.util.ArrayList;
+import java.util.ArrayList;
 
 
 public class ContactConsult{

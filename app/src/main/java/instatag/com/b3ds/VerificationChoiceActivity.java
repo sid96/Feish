@@ -5,16 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsMessage;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -35,9 +32,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 import static instatag.com.b3ds.MainActivity.JSON;
-import static instatag.com.b3ds.R.id.firstname;
-import static instatag.com.b3ds.R.id.lastname;
-import static instatag.com.b3ds.R.id.login_register_activity;
 
 /**
  * Created by This Pc on 3/1/2018.

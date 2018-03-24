@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.squareup.okhttp.Callback;
@@ -17,6 +18,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -24,9 +26,7 @@ import java.io.IOException;
 
 import static instatag.com.b3ds.MainActivity.JSON;
 
-/**
- * Created by This Pc on 3/3/2018.
- */
+
 
 public class VerifyRegEmail extends AppCompatActivity{
 

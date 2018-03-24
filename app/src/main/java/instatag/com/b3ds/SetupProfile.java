@@ -1,21 +1,13 @@
 package instatag.com.b3ds;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -33,21 +25,7 @@ import com.squareup.okhttp.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.net.ssl.HttpsURLConnection;
 
 /**
  * Created by This Pc on 3/8/2018.
@@ -73,27 +51,25 @@ public class SetupProfile extends Activity {
         setContentView(R.layout.newsetupprofileactivity);
         Bundle bundle = getIntent().getExtras();
 
-        imageView = (ImageView)findViewById(R.id.imageViewforsetupprofile);
-        firstname=(EditText)findViewById(R.id.setupfirstname);
-        lastname=(EditText)findViewById(R.id.setuplastname);
-        email=(EditText)findViewById(R.id.setupemail);
-        mobile=(EditText)findViewById(R.id.setupmobile);
+        imageView = findViewById(R.id.imageViewforsetupprofile);
+        firstname=findViewById(R.id.setupfirstname);
+        lastname=findViewById(R.id.setuplastname);
+        email=findViewById(R.id.setupemail);
+        mobile=findViewById(R.id.setupmobile);
+        submit=findViewById(R.id.submitprofile);
+        address =findViewById(R.id.setupaddress);
+        identityno =findViewById(R.id.identityno);
+        height=findViewById(R.id.setupheight);
+        weight=findViewById(R.id.setupweight);
+        bmi=findViewById(R.id.setupbmi);
 
+        radioButtonMale =  findViewById(R.id.radioMale);
+        radioButtonFemale =  findViewById(R.id.radioFemale);
 
-        submit=(Button)findViewById(R.id.submitprofile);
-        address =(EditText)findViewById(R.id.setupaddress);
-        identityno =(EditText)findViewById(R.id.identityno);
-        height=(EditText)findViewById(R.id.setupheight);
-        weight=(EditText)findViewById(R.id.setupweight);
-        bmi=(TextView) findViewById(R.id.setupbmi);
+        radioButtonMarried =  findViewById(R.id.marriedid);
+        radioButtonUnmarried =  findViewById(R.id.unmarriedid);
 
-        radioButtonMale = (RadioButton) findViewById(R.id.radioMale);
-        radioButtonFemale = (RadioButton) findViewById(R.id.radioFemale);
-
-        radioButtonMarried = (RadioButton) findViewById(R.id.marriedid);
-        radioButtonUnmarried = (RadioButton) findViewById(R.id.unmarriedid);
-
-        occupation=(Spinner)findViewById(R.id.setupoccupation);
+        occupation=findViewById(R.id.setupoccupation);
 
 
 

@@ -1,7 +1,7 @@
 package instatag.com.b3ds;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class ViewProfileDoctor extends AppCompatActivity {

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,9 +26,7 @@ import java.io.IOException;
 
 import static instatag.com.b3ds.MainActivity.JSON;
 
-/**
- * Created by This Pc on 3/3/2018.
- */
+
 
 public class SetPasswordActivity extends AppCompatActivity {
 

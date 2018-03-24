@@ -2,25 +2,11 @@ package instatag.com.b3ds;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.Spinner;
-
-
-import android.widget.Button;
-
-import android.widget.TextView;
-
-import com.squareup.okhttp.MediaType;
-
-import android.app.Activity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,12 +29,9 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static android.content.ContentValues.TAG;
 import static com.google.android.gms.internal.zzagz.runOnUiThread;
 
-/**
- * Created by haade on 13/09/2017.
- */
+
 
 public class AddServices extends Fragment {
     private EditText facilityname, description, address, placename, locality, pincode, phone;
