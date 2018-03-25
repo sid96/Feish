@@ -112,23 +112,10 @@ public class MainActivity extends AppCompatActivity {
                                         if((loginResponse.getData().getUserType()).compareTo("4")==0) {
 
                                             Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
-                                            intent.putExtra("firstname", loginResponse.getData().getFirstName());
-                                            intent.putExtra("mobile", loginResponse.getData().getMobile());
-                                            intent.putExtra("lastname", loginResponse.getData().getLastName());
-                                            intent.putExtra("email", loginResponse.getData().getEmail());
-                                            intent.putExtra("userid", loginResponse.getData().getId());
-                                            //intent2.putExtras(intent);
                                             startActivity(intent);
                                         }
                                         else{
                                             Intent intent = new Intent(MainActivity.this, DoctorDashboardActivity.class);
-                                            //intent.putExtra("mci_number", loginResponse.getData().getMciNumber().toString());
-                                            intent.putExtra("firstname", loginResponse.getData().getFirstName());
-                                            intent.putExtra("mobile", loginResponse.getData().getMobile());
-                                            intent.putExtra("lastname", loginResponse.getData().getLastName());
-                                            intent.putExtra("email", loginResponse.getData().getEmail());
-                                            intent.putExtra("userid", loginResponse.getData().getId());
-                                            //intent2.putExtras(intent);
                                             startActivity(intent);
 
                                         }

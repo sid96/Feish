@@ -66,10 +66,6 @@ public class ConsultDoctorActivity extends AppCompatActivity {
                 new AdapterView.OnItemSelectedListener() {
                     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                         specialist_doc_val=pos+1;
-                        //Log.i(TAG, "onItemSelected: "+pos);
-                        //Log.i(TAG, "onItemSelected: "+id);
-
-
                     }
                     public void onNothingSelected(AdapterView<?> parent) {
                         specialist_doc_val=1;
@@ -137,8 +133,6 @@ public class ConsultDoctorActivity extends AppCompatActivity {
            postdata.put("address",enteryourAddress.getText().toString());
             postdata.put("specialty_id",Integer.toString(specialist_doc_val));
            // postdata.put("address",enteraddresslabname.getText().toString());
-
-
             //postdata.put("height",height.getText().toString());
             // postdata.put("address",address.getText().toString());
         } catch(JSONException e){

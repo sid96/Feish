@@ -53,8 +53,8 @@ public class RegisterActivity extends AppCompatActivity {
                 new AdapterView.OnItemSelectedListener() {
                     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                     salutation_val=pos+1;
-                        //Log.i(TAG, "onItemSelected: "+pos);
-                        //Log.i(TAG, "onItemSelected: "+id);
+                        Log.i(TAG, "onItemSelected: "+pos);
+                        Log.i(TAG, "onItemSelected: "+id);
 
 
                     }

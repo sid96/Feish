@@ -98,7 +98,7 @@ public class SetupProfileForDoctor extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(),"Update successful",Toast.LENGTH_LONG).show();
 
 
-                                    Intent intent=new Intent(SetupProfileForDoctor.this,ViewProfileDoctor.class);
+                                    Intent intent=new Intent(SetupProfileForDoctor.this,ViewProfilePatient.class);
                                     intent.putExtra("firstname",bundle.getString("firstname"));
                                    // intent.putExtra("userid",userid);
                                     startActivity(intent);

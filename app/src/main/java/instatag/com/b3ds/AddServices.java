@@ -45,10 +45,7 @@ public class AddServices extends Fragment {
 
     final String[] select_qualification = {"Select Specialty", "Andrology", "Anesthesia", "Angiology", "Aviation Medicine", "BioMedicine", "Cardiology",
             "Dentistry", "Dermatology", "Disaster Medicine", "Emergency Medicine", "Family Medicine", "General Practice", "Dentistry", "Medical Genetics", "Gynaecology", "Infectious Disease"};
-    //Constructor default
-    /*public AddServices() {
-    }
-    ;*/
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View PageOne = inflater.inflate(R.layout.add_services_fragment, container, false);
@@ -70,9 +67,6 @@ public class AddServices extends Fragment {
                 new AdapterView.OnItemSelectedListener() {
                     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                         choosespecialist_val=pos+1;
-                        //Log.i(TAG, "onItemSelected: "+pos);
-                        //Log.i(TAG, "onItemSelected: "+id);
-
 
                     }
                     public void onNothingSelected(AdapterView<?> parent) {
@@ -80,12 +74,6 @@ public class AddServices extends Fragment {
                     }
                 });
 
-
-
-        // firstname.setText(bundle.getString("firstname"));
-        //lastname.setText(bundle.getString("lastname"));
-        //email.setText(bundle.getString("email"));
-        //mobile.setText(bundle.getString("mobile"));
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override

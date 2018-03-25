@@ -31,10 +31,12 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".SetupProfile" />
+        <activity android:name=".ViewProfilePatient"></activity>
         <activity android:name=".ConsultDoctorActivity" />
         <activity android:name=".VisitReportActivity" />
         <activity android:name=".DoctorDashboardActivity" />
         <activity android:name=".ServicesActivity"></activity>
+        <activity android:name=".EditProfile"></activity>
     </application>
 
 </manifest>

@@ -49,7 +49,6 @@ public class SetupProfile extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newsetupprofileactivity);
-        Bundle bundle = getIntent().getExtras();
 
         imageView = findViewById(R.id.imageViewforsetupprofile);
         firstname=findViewById(R.id.setupfirstname);
@@ -62,20 +61,11 @@ public class SetupProfile extends Activity {
         height=findViewById(R.id.setupheight);
         weight=findViewById(R.id.setupweight);
         bmi=findViewById(R.id.setupbmi);
-
         radioButtonMale =  findViewById(R.id.radioMale);
         radioButtonFemale =  findViewById(R.id.radioFemale);
-
         radioButtonMarried =  findViewById(R.id.marriedid);
         radioButtonUnmarried =  findViewById(R.id.unmarriedid);
-
         occupation=findViewById(R.id.setupoccupation);
-
-
-
-
-
-
         occupation.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
                     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -142,13 +132,6 @@ public class SetupProfile extends Activity {
                     }
                 });
 
-        firstname.setText(bundle.getString("firstname"));
-
-        lastname.setText(bundle.getString("lastname"));
-
-        email.setText(bundle.getString("email"));
-
-        mobile.setText(bundle.getString("mobile"));
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -233,7 +216,6 @@ public class SetupProfile extends Activity {
             postdata.put("height",height.getText().toString());
             postdata.put("gender",Integer.toString(gender));
             postdata.put("marital_status",Integer.toString(marrital));
-            //postdata.put("bmi",bmi.getText().toString());
             postdata.put("address",address.getText().toString());
             postdata.put("first_name",firstname.getText().toString());
             postdata.put("last_name",lastname.getText().toString());
@@ -244,8 +226,6 @@ public class SetupProfile extends Activity {
             postdata.put("blood_group",Integer.toString(bloodgroup_val));
             postdata.put("identity_type",Integer.toString(identitytype_val));
             postdata.put("identity_id",identityno.getText().toString());
-            //postdata.put("height",height.getText().toString());
-            // postdata.put("address",address.getText().toString());
         } catch(JSONException e){
             e.printStackTrace();
         }

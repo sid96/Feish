@@ -24,8 +24,6 @@ public class ChoiceActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choice_activity);
 
-
-        // onButtonShowPopupWindowClick(findViewById(R.id.activity_main_layout));
     }
 
     @Override
