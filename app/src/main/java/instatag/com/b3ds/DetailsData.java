@@ -7,18 +7,9 @@ import java.io.Serializable;
 
 public class DetailsData implements Serializable {
 
-    @SerializedName("id")
+    @SerializedName("user_id")
     @Expose
-    private String id;
-    @SerializedName("email")
-    @Expose
-    private String email;
-    @SerializedName("password")
-    @Expose
-    private String password;
-    @SerializedName("salutation")
-    @Expose
-    private String salutation;
+    private String userId;
     @SerializedName("first_name")
     @Expose
     private String firstName;
@@ -27,31 +18,13 @@ public class DetailsData implements Serializable {
     private String lastName;
     @SerializedName("birth_date")
     @Expose
-    private Object birthDate;
-    @SerializedName("registration_no")
-    @Expose
-    private String registrationNo;
-    @SerializedName("gender")
-    @Expose
-    private String gender;
-    @SerializedName("mobile")
-    @Expose
-    private String mobile;
-    @SerializedName("qualification")
-    @Expose
-    private Object qualification;
-    @SerializedName("mci_number")
-    @Expose
-    private Object mciNumber;
-    @SerializedName("consultation_time")
-    @Expose
-    private String consultationTime;
-    @SerializedName("patient_key")
-    @Expose
-    private Object patientKey;
+    private String birthDate;
     @SerializedName("avatar")
     @Expose
     private Object avatar;
+    @SerializedName("qualification")
+    @Expose
+    private Object qualification;
     @SerializedName("facebook")
     @Expose
     private Object facebook;
@@ -61,112 +34,64 @@ public class DetailsData implements Serializable {
     @SerializedName("twitter")
     @Expose
     private Object twitter;
-    @SerializedName("user_type")
-    @Expose
-    private String userType;
-    @SerializedName("ip_address")
-    @Expose
-    private String ipAddress;
-    @SerializedName("identity_type")
-    @Expose
-    private Object identityType;
-    @SerializedName("identity_id")
-    @Expose
-    private Object identityId;
-    @SerializedName("is_active")
-    @Expose
-    private String isActive;
-    @SerializedName("is_verified")
-    @Expose
-    private String isVerified;
-    @SerializedName("is_mobile_verified")
-    @Expose
-    private String isMobileVerified;
-    @SerializedName("is_email_verified")
-    @Expose
-    private String isEmailVerified;
-    @SerializedName("is_deleted")
-    @Expose
-    private String isDeleted;
-    @SerializedName("prev_rating")
-    @Expose
-    private String prevRating;
-    @SerializedName("avg_rating")
-    @Expose
-    private String avgRating;
-    @SerializedName("added_by_doctor_id")
-    @Expose
-    private Object addedByDoctorId;
-    @SerializedName("added_by_laboratory_id")
-    @Expose
-    private Object addedByLaboratoryId;
-    @SerializedName("otp")
-    @Expose
-    private Object otp;
-    @SerializedName("created")
-    @Expose
-    private String created;
-    @SerializedName("modified")
-    @Expose
-    private String modified;
-    @SerializedName("marital_status")
-    @Expose
-    private Object maritalStatus;
-    @SerializedName("blood_group")
-    @Expose
-    private Object bloodGroup;
-    @SerializedName("occupation_id")
-    @Expose
-    private Object occupationId;
     @SerializedName("address")
     @Expose
     private Object address;
+    @SerializedName("occupation_id")
+    @Expose
+    private String occupationId;
+    @SerializedName("consultation_time")
+    @Expose
+    private String consultationTime;
+    @SerializedName("ethnicity_id")
+    @Expose
+    private Object ethnicityId;
+    @SerializedName("identity_id")
+    @Expose
+    private Object identityId;
+    @SerializedName("identity_type")
+    @Expose
+    private String identityType;
+    @SerializedName("blood_group")
+    @Expose
+    private String bloodGroup;
+    @SerializedName("gender")
+    @Expose
+    private String gender;
+    @SerializedName("marital_status")
+    @Expose
+    private String maritalStatus;
     @SerializedName("state")
     @Expose
     private Object state;
     @SerializedName("city")
     @Expose
     private Object city;
-    @SerializedName("ethnicity_id")
+    @SerializedName("email")
     @Expose
-    private Object ethnicityId;
-    @SerializedName("identity")
+    private String email;
+    @SerializedName("mobile")
     @Expose
-    private Object identity;
-    @SerializedName("full_name")
+    private String mobile;
+    @SerializedName("salutation")
     @Expose
-    private String fullName;
+    private String salutation;
+    @SerializedName("height")
+    @Expose
+    private String height;
+    @SerializedName("weight")
+    @Expose
+    private String weight;
+    @SerializedName("waist_size")
+    @Expose
+    private String waistSize;
 
-    public String getId() {
-        return id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getSalutation() {
-        return salutation;
-    }
-
-    public void setSalutation(String salutation) {
-        this.salutation = salutation;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getFirstName() {
@@ -185,68 +110,12 @@ public class DetailsData implements Serializable {
         this.lastName = lastName;
     }
 
-    public Object getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Object birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
-    }
-
-    public String getRegistrationNo() {
-        return registrationNo;
-    }
-
-    public void setRegistrationNo(String registrationNo) {
-        this.registrationNo = registrationNo;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
-
-    public Object getQualification() {
-        return qualification;
-    }
-
-    public void setQualification(Object qualification) {
-        this.qualification = qualification;
-    }
-
-    public Object getMciNumber() {
-        return mciNumber;
-    }
-
-    public void setMciNumber(Object mciNumber) {
-        this.mciNumber = mciNumber;
-    }
-
-    public String getConsultationTime() {
-        return consultationTime;
-    }
-
-    public void setConsultationTime(String consultationTime) {
-        this.consultationTime = consultationTime;
-    }
-
-    public Object getPatientKey() {
-        return patientKey;
-    }
-
-    public void setPatientKey(Object patientKey) {
-        this.patientKey = patientKey;
     }
 
     public Object getAvatar() {
@@ -255,6 +124,14 @@ public class DetailsData implements Serializable {
 
     public void setAvatar(Object avatar) {
         this.avatar = avatar;
+    }
+
+    public Object getQualification() {
+        return qualification;
+    }
+
+    public void setQualification(Object qualification) {
+        this.qualification = qualification;
     }
 
     public Object getFacebook() {
@@ -281,28 +158,36 @@ public class DetailsData implements Serializable {
         this.twitter = twitter;
     }
 
-    public String getUserType() {
-        return userType;
+    public Object getAddress() {
+        return address;
     }
 
-    public void setUserType(String userType) {
-        this.userType = userType;
+    public void setAddress(Object address) {
+        this.address = address;
     }
 
-    public String getIpAddress() {
-        return ipAddress;
+    public String getOccupationId() {
+        return occupationId;
     }
 
-    public void setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
+    public void setOccupationId(String occupationId) {
+        this.occupationId = occupationId;
     }
 
-    public Object getIdentityType() {
-        return identityType;
+    public String getConsultationTime() {
+        return consultationTime;
     }
 
-    public void setIdentityType(Object identityType) {
-        this.identityType = identityType;
+    public void setConsultationTime(String consultationTime) {
+        this.consultationTime = consultationTime;
+    }
+
+    public Object getEthnicityId() {
+        return ethnicityId;
+    }
+
+    public void setEthnicityId(Object ethnicityId) {
+        this.ethnicityId = ethnicityId;
     }
 
     public Object getIdentityId() {
@@ -313,132 +198,36 @@ public class DetailsData implements Serializable {
         this.identityId = identityId;
     }
 
-    public String getIsActive() {
-        return isActive;
+    public String getIdentityType() {
+        return identityType;
     }
 
-    public void setIsActive(String isActive) {
-        this.isActive = isActive;
+    public void setIdentityType(String identityType) {
+        this.identityType = identityType;
     }
 
-    public String getIsVerified() {
-        return isVerified;
-    }
-
-    public void setIsVerified(String isVerified) {
-        this.isVerified = isVerified;
-    }
-
-    public String getIsMobileVerified() {
-        return isMobileVerified;
-    }
-
-    public void setIsMobileVerified(String isMobileVerified) {
-        this.isMobileVerified = isMobileVerified;
-    }
-
-    public String getIsEmailVerified() {
-        return isEmailVerified;
-    }
-
-    public void setIsEmailVerified(String isEmailVerified) {
-        this.isEmailVerified = isEmailVerified;
-    }
-
-    public String getIsDeleted() {
-        return isDeleted;
-    }
-
-    public void setIsDeleted(String isDeleted) {
-        this.isDeleted = isDeleted;
-    }
-
-    public String getPrevRating() {
-        return prevRating;
-    }
-
-    public void setPrevRating(String prevRating) {
-        this.prevRating = prevRating;
-    }
-
-    public String getAvgRating() {
-        return avgRating;
-    }
-
-    public void setAvgRating(String avgRating) {
-        this.avgRating = avgRating;
-    }
-
-    public Object getAddedByDoctorId() {
-        return addedByDoctorId;
-    }
-
-    public void setAddedByDoctorId(Object addedByDoctorId) {
-        this.addedByDoctorId = addedByDoctorId;
-    }
-
-    public Object getAddedByLaboratoryId() {
-        return addedByLaboratoryId;
-    }
-
-    public void setAddedByLaboratoryId(Object addedByLaboratoryId) {
-        this.addedByLaboratoryId = addedByLaboratoryId;
-    }
-
-    public Object getOtp() {
-        return otp;
-    }
-
-    public void setOtp(Object otp) {
-        this.otp = otp;
-    }
-
-    public String getCreated() {
-        return created;
-    }
-
-    public void setCreated(String created) {
-        this.created = created;
-    }
-
-    public String getModified() {
-        return modified;
-    }
-
-    public void setModified(String modified) {
-        this.modified = modified;
-    }
-
-    public Object getMaritalStatus() {
-        return maritalStatus;
-    }
-
-    public void setMaritalStatus(Object maritalStatus) {
-        this.maritalStatus = maritalStatus;
-    }
-
-    public Object getBloodGroup() {
+    public String getBloodGroup() {
         return bloodGroup;
     }
 
-    public void setBloodGroup(Object bloodGroup) {
+    public void setBloodGroup(String bloodGroup) {
         this.bloodGroup = bloodGroup;
     }
 
-    public Object getOccupationId() {
-        return occupationId;
+    public String getGender() {
+        return gender;
     }
 
-    public void setOccupationId(Object occupationId) {
-        this.occupationId = occupationId;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public Object getAddress() {
-        return address;
+    public String getMaritalStatus() {
+        return maritalStatus;
     }
 
-    public void setAddress(Object address) {
-        this.address = address;
+    public void setMaritalStatus(String maritalStatus) {
+        this.maritalStatus = maritalStatus;
     }
 
     public Object getState() {
@@ -457,28 +246,52 @@ public class DetailsData implements Serializable {
         this.city = city;
     }
 
-    public Object getEthnicityId() {
-        return ethnicityId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEthnicityId(Object ethnicityId) {
-        this.ethnicityId = ethnicityId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Object getIdentity() {
-        return identity;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setIdentity(Object identity) {
-        this.identity = identity;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getSalutation() {
+        return salutation;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setSalutation(String salutation) {
+        this.salutation = salutation;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public String getWaistSize() {
+        return waistSize;
+    }
+
+    public void setWaistSize(String waistSize) {
+        this.waistSize = waistSize;
     }
 
 }

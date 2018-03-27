@@ -111,28 +111,27 @@ public class ViewProfilePatient extends AppCompatActivity {
         TextView bmi=(TextView)findViewById(R.id.setupbmi);
         Spinner occupation=(Spinner)findViewById(R.id.viewoccupation);
         if(cd.getData().getOccupationId()!=null) {
-            occupation.setSelection(Integer.parseInt((String)cd.getData().getOccupationId()));
+            occupation.setSelection(Integer.parseInt((String)cd.getData().getOccupationId())-13);
         }
         occupation.setEnabled(false);
-
         Spinner bloodgroup=(Spinner)findViewById(R.id.viewbloodgroup);
         if(cd.getData().getBloodGroup()!=null)
         {
-            bloodgroup.setSelection(Integer.parseInt((String)cd.getData().getBloodGroup()));
+            bloodgroup.setSelection(Integer.parseInt((String)cd.getData().getBloodGroup())-1);
         }
         bloodgroup.setEnabled(false);
 
         Spinner ethinicity=(Spinner)findViewById(R.id.viewethnicity);
         if(cd.getData().getEthnicityId()!=null)
         {
-            ethinicity.setSelection(Integer.parseInt((String)cd.getData().getEthnicityId()));
+            ethinicity.setSelection(Integer.parseInt((String)cd.getData().getEthnicityId())-18);
         }
         ethinicity.setEnabled(false);
 
         Spinner identitytype=(Spinner)findViewById(R.id.viewidentityproof);
         if(cd.getData().getIdentityType()!=null)
         {
-            identitytype.setSelection(Integer.parseInt((String)cd.getData().getIdentityId())-1);
+          //  identitytype.setSelection(Integer.parseInt((String)cd.getData().getIdentityId())-10);
         }
         identitytype.setEnabled(false);
 
@@ -149,6 +148,13 @@ public class ViewProfilePatient extends AppCompatActivity {
         if(cd.getData().getIdentityId()!=null)
         identityno.setText((String)cd.getData().getIdentityId());
 
+        if(cd.getData().getHeight()!=null)
+            height.setText(cd.getData().getHeight());
+
+        if(cd.getData().getWeight()!=null)
+            weight.setText(cd.getData().getWeight());
+
+        //bmi.setText("0");
         edit=(Button)findViewById(R.id.editprofile);
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
